@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あいんぐらんぷ - 灯りと共に心が奏でるメロディーを | 兵庫県西宮市</title>
+    <meta name="description" content="福祉の温かさと音楽の響きが交差する唯一無二の場所。手作りキャンドル・アルコールランプの販売と「らぶキャン」作り体験。沖永良部島の海が見える癒しの空間で、心に寄り添う灯りの物語を。兵庫県西宮市山口町。">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "あいんぐらんぷ",
+        "description": "福祉の温かさと音楽の響きが交差する唯一無二の場所。手作りキャンドル・アルコールランプの販売と体験。",
+        "url": "https://aing-lamp.com",
+        "telephone": "078-223-5590",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "山口町名来1-22-7",
+            "addressLocality": "西宮市",
+            "addressRegion": "兵庫県",
+            "postalCode": "651-1421",
+            "addressCountry": "JP"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "10:00",
+                "closes": "17:00"
+            }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "商品・サービス",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Product",
+                        "name": "らぶキャン",
+                        "description": "手のひらサイズのガラス瓶にハートを詰め込んだロマンティックなキャンドル"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "らぶキャン作り体験",
+                        "description": "オリジナルキャンドル作り体験（予約制）"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <style>
+        /* カスタムフォント設定 */
+        .font-serif-jp {
+            font-family: 'Noto Serif JP', serif;
+        }
+        
+        /* スムーズスクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* ヘッダーの背景トランジション */
+        .header-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* 初期状態のヘッダーテキスト */
+        header:not(.header-scrolled) a,
+        header:not(.header-scrolled) button {
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        /* スクロール後のヘッダーテキスト */
+        .header-scrolled a,
+        .header-scrolled button {
+            color: #1f2937;
+            text-shadow: none;
+        }
+        
+        /* ホバー時の色 */
+        header:not(.header-scrolled) a:hover {
+            color: #fed7aa;
+        }
+        
+        .header-scrolled a:hover {
+            color: #ea580c;
+        }
+        
+        /* ロゴの色制御 */
+        header:not(.header-scrolled) .logo-text {
+            color: white;
+        }
+        
+        .header-scrolled .logo-text {
+            color: #ea580c;
+        }
+        
+        /* カスタムグラデーション */
+        .gradient-warm {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+        }
+        
+        .gradient-candle {
+            background: linear-gradient(135deg, #FFB74D 0%, #FF8A65 100%);
+        }
+        
+        /* アニメーション */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- ヘッダー -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <!-- ロゴ -->
+                <a href="#home" class="text-2xl font-serif-jp font-bold logo-text flex items-center space-x-2">
+                    <i class="fas fa-burn text-xl"></i>
+                    <span>あいんぐらんぷ</span>
+                </a>
+                
+                <!-- デスクトップメニュー -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#home" class="hover:text-orange-600 transition-colors">ホーム</a></li>
+                    <li><a href="#about" class="hover:text-orange-600 transition-colors">私たちについて</a></li>
+                    <li><a href="#products" class="hover:text-orange-600 transition-colors">商品紹介</a></li>
+                    <li><a href="#gallery" class="hover:text-orange-600 transition-colors">ギャラリー</a></li>
+                    <li><a href="#tour" class="hover:text-orange-600 transition-colors">体験ツアー</a></li>
+                    <li><a href="#access" class="hover:text-orange-600 transition-colors">アクセス</a></li>
+                </ul>
+                
+                <!-- ハンバーガーメニュー -->
+                <button id="menu-toggle" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+            
+            <!-- モバイルメニュー -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-4">
+                    <li><a href="#home" class="block hover:text-orange-600 transition-colors">ホーム</a></li>
+                    <li><a href="#about" class="block hover:text-orange-600 transition-colors">私たちについて</a></li>
+                    <li><a href="#products" class="block hover:text-orange-600 transition-colors">商品紹介</a></li>
+                    <li><a href="#gallery" class="block hover:text-orange-600 transition-colors">ギャラリー</a></li>
+                    <li><a href="#tour" class="block hover:text-orange-600 transition-colors">体験ツアー</a></li>
+                    <li><a href="#access" class="block hover:text-orange-600 transition-colors">アクセス</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- 背景画像 -->
+        <div class="absolute inset-0">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/hero-mobile.jpg">
+                <img src="images/hero-desktop.jpg" alt="あいんぐらんぷ - らぶキャン" class="w-full h-full object-cover">
+            </picture>
+            <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+        
+        <!-- コンテンツ -->
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-3xl md:text-5xl font-serif-jp font-bold mb-6 text-white drop-shadow-lg">
+                灯りと共に<br>
+                <span class="text-orange-300">心が奏でるメロディーを</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-8 text-white drop-shadow-md">
+                福祉の温かさと音楽の響きが交差する<br>
+                唯一無二の場所で灯りをお届け
+            </p>
+            
+            <!-- Instagramリンク -->
+            <a href="https://www.instagram.com/aing_lamp" target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <i class="fab fa-instagram text-2xl text-pink-600"></i>
+                <span class="font-bold">@aing_lamp</span>
+            </a>
+        </div>
+        
+        <!-- スクロール誘導 -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 float-animation">
+            <i class="fas fa-chevron-down text-3xl text-white drop-shadow-lg"></i>
+        </div>
+    </section>
+
+    <!-- 沖永良部島の物語 -->
+    <section class="py-12 gradient-warm">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h3 class="text-2xl font-serif-jp font-bold mb-6">沖永良部島からの贈り物</h3>
+                <div class="bg-white/80 backdrop-blur rounded-xl p-8 shadow-lg">
+                    <p class="leading-relaxed mb-4">
+                        リニューアルした店内からは、沖永良部島の海が見えるようになりました。
+                        オーナーの故郷である沖永良部島の温かさと美しさを、
+                        この場所で感じていただけるよう心を込めて作り上げました。
+                    </p>
+                    <p class="leading-relaxed">
+                        島の形をした看板、流木の扉、そして南国の風を感じる空間。
+                        遠く離れた島の記憶が、ここ西宮で新たな物語を紡ぎ始めます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 私たちについて -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif-jp font-bold text-center mb-16">私たちについて</h2>
+            
+            <!-- 事業内容 -->
+            <div class="grid md:grid-cols-2 gap-12 mb-20">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-orange-600">手作りの温もりをお届け</h3>
+                    <p class="leading-relaxed">
+                        あいんぐらんぷでは、手作りキャンドルとアルコールランプの販売を中心に、
+                        お客様自身でオリジナルキャンドルを作る体験もご提供しています。
+                    </p>
+                    <div class="bg-orange-50 p-6 rounded-lg">
+                        <h4 class="font-bold mb-2">オリジナルキャンドル作り「らぶキャン」</h4>
+                        <p class="text-sm">
+                            好きなカラーの♡を選び、自由に瓶に詰めていくだけで
+                            可愛いあなただけの"らぶキャン"が生まれます
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gray-200 rounded-lg h-80 flex items-center justify-center">
+                    <span class="text-gray-500">キャンドル作りの画像</span>
+                </div>
+            </div>
+            
+            <!-- 6つの特徴 -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center space-y-4">
+                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-hands-helping text-3xl text-orange-600"></i>
+                    </div>
+                    <h4 class="font-bold">福祉×音楽×癒し</h4>
+                    <p class="text-sm">障がい福祉事業所・音楽ホールが併設された唯一無二の融合施設</p>
+                </div>
+                
+                <div class="text-center space-y-4">
+                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-tree text-3xl text-orange-600"></i>
+                    </div>
+                    <h4 class="font-bold">流木の温もり</h4>
+                    <p class="text-sm">扉や店内に流木を使用し、自然の温もりが感じられる空間</p>
+                </div>
+                
+                <div class="text-center space-y-4">
+                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-umbrella-beach text-3xl text-orange-600"></i>
+                    </div>
+                    <h4 class="font-bold">沖永良部島の風</h4>
+                    <p class="text-sm">オーナーの故郷・沖永良部島の形をした看板や南国の雰囲気</p>
+                </div>
+                
+                <div class="text-center space-y-4">
+                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-hand-sparkles text-3xl text-orange-600"></i>
+                    </div>
+                    <h4 class="font-bold">五感を揺さぶる手仕事</h4>
+                    <p class="text-sm">ひとつひとつ丁寧に作られた作品が持つ特別な温もり</p>
+                </div>
+                
+                <div class="text-center space-y-4">
+                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-heart text-3xl text-orange-600"></i>
+                    </div>
+                    <h4 class="font-bold">みんなで作る温もり</h4>
+                    <p class="text-sm">福祉事業所の利用者様が丁寧に作業参加（型抜きや紙袋のイラストなど）</p>
+                </div>
+                
+                <div class="text-center space-y-4">
+                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-fire text-3xl text-orange-600"></i>
+                    </div>
+                    <h4 class="font-bold">小さなアウトドア空間</h4>
+                    <p class="text-sm">中庭には焚き火台やウッドデッキがあり、特別な時間を過ごせます</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商品紹介 -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif-jp font-bold text-center mb-16">商品紹介</h2>
+            
+            <!-- らぶキャン -->
+            <div class="mb-20">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/2">
+                            <div class="bg-pink-100 h-80 flex items-center justify-center">
+                                <span class="text-gray-500">らぶキャンの画像</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <h3 class="text-2xl font-bold mb-4 text-pink-600">らぶキャン</h3>
+                            <p class="text-lg font-bold mb-2">¥1,200〜</p>
+                            <p class="mb-4">
+                                手のひらサイズのガラス瓶に、たくさんのハートを詰め込んだロマンティックなキャンドル。
+                                火を灯せば優しい光がハートをふんわりと照らし出し、お部屋をあたたかく甘い雰囲気で満たしてくれます。
+                            </p>
+                            <div class="bg-pink-50 p-4 rounded-lg">
+                                <p class="text-sm font-bold mb-2">体験も可能！</p>
+                                <p class="text-sm">
+                                    「今の気分のよう」「来る時の夕焼け空が綺麗だったから」
+                                    素敵なストーリーと共に生まれる、らぶキャン作りはご予約制です。
+                                </p>
+                                <p class="text-sm font-bold mt-2">体験料金：¥2,000（作品付き）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- アルコールランプ -->
+            <div class="mb-20">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 order-2">
+                            <div class="bg-orange-100 h-80 flex items-center justify-center">
+                                <span class="text-gray-500">アルコールランプの画像</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 p-8 order-1">
+                            <h3 class="text-2xl font-bold mb-4 text-orange-600">アルコールランプ</h3>
+                            <p class="text-lg font-bold mb-2">¥3,500〜</p>
+                            <p class="mb-4">
+                                昔懐かしいアルコールランプを現代風にアレンジ。
+                                やわらかな炎の揺らめきは、心を落ち着かせ、特別な時間を演出します。
+                                停電時の明かりとしても実用的です。
+                            </p>
+                            <div class="space-y-2">
+                                <p class="text-sm"><i class="fas fa-check text-orange-600 mr-2"></i>オリジナルデザイン</p>
+                                <p class="text-sm"><i class="fas fa-check text-orange-600 mr-2"></i>安全性に配慮した設計</p>
+                                <p class="text-sm"><i class="fas fa-check text-orange-600 mr-2"></i>ギフトラッピング対応</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- その他の商品 -->
+            <div class="text-center">
+                <p class="text-lg mb-4">その他、季節のキャンドルや香りのキャンドルなど、多数取り揃えております。</p>
+                <p class="text-sm text-gray-600">※価格は全て税込表示です</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ギャラリー -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif-jp font-bold text-center mb-16">ギャラリー</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- 画像プレースホルダー -->
+                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <span class="text-gray-600">店内の様子1</span>
+                </div>
+                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <span class="text-gray-600">キャンドル商品</span>
+                </div>
+                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <span class="text-gray-600">体験の様子</span>
+                </div>
+                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <span class="text-gray-600">中庭スペース</span>
+                </div>
+                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <span class="text-gray-600">アルコールランプ</span>
+                </div>
+                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity">
+                    <span class="text-gray-600">店内の様子2</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 体験ツアー -->
+    <section id="tour" class="py-20 gradient-candle text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-serif-jp font-bold text-center mb-4">
+                    福祉と奏でる<br>灯りの物語ツアー
+                </h2>
+                <p class="text-center mb-12 text-lg">
+                    障がい福祉事業所の利用者さまと、キャンドルを通して心を繋ぐ体験...
+                </p>
+                
+                <!-- プログラム内容 -->
+                <div class="bg-white text-gray-800 rounded-2xl p-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-6 text-center text-orange-600">Program</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">1</div>
+                            <div>
+                                <p class="font-bold">お出迎え&ご説明（10分）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">2</div>
+                            <div>
+                                <p class="font-bold">福祉事業所の作業風景見学&交流（25分）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">3</div>
+                            <div>
+                                <p class="font-bold">癒しのキャンドル製作体験（35分）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">4</div>
+                            <div>
+                                <p class="font-bold">中庭"癒しのアウトドア空間"でのティータイム（20分）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">5</div>
+                            <div>
+                                <p class="font-bold">音楽ホール"音あかりコンサート"（20分）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">6</div>
+                            <div>
+                                <p class="font-bold">お土産とショップ案内（10分）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 料金・時間情報 -->
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white text-gray-800 rounded-xl p-6 text-center">
+                        <h4 class="text-xl font-bold mb-2">時間・料金</h4>
+                        <p class="text-3xl font-bold text-orange-600 mb-2">¥3,800</p>
+                        <p class="text-sm">約120分（制作したキャンドル付き）</p>
+                    </div>
+                    
+                    <div class="bg-white text-gray-800 rounded-xl p-6 text-center">
+                        <h4 class="text-xl font-bold mb-2">開催時間</h4>
+                        <p class="font-bold">完全予約制</p>
+                        <p>①10:00〜12:00</p>
+                        <p>②13:00〜15:00</p>
+                        <p class="text-sm mt-2">各時間2名様〜</p>
+                    </div>
+                </div>
+                
+                <!-- 注意事項 -->
+                <div class="bg-white/20 rounded-xl p-6 backdrop-blur-sm">
+                    <p class="text-sm mb-2">
+                        ◯ 他メンバーとの一緒の行動が難しい等のご事情がございましたらお気軽にご相談くださいませ。
+                    </p>
+                    <p class="text-sm">
+                        ◯ 団体割引8名様〜可。詳細はお問い合わせ下さいませ。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ひだまりサロン＆関連施設 -->
+    <section class="py-12 bg-orange-50">
+        <div class="container mx-auto px-4">
+            <!-- ひだまりサロン -->
+            <div class="max-w-2xl mx-auto text-center mb-12">
+                <div class="inline-block bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-sm text-gray-600 mb-2">音楽&灯り 就労継続支援B型</h3>
+                    <h2 class="text-2xl font-serif-jp font-bold mb-4">ひだまりサロン</h2>
+                    <p class="text-gray-700 mb-4">
+                        障がいある方が<br>
+                        自分らしく生き生き<br>
+                        活動できる場所
+                    </p>
+                    <p class="text-sm text-gray-600">
+                        詳しくはお問い合わせください
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 関連施設 -->
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-serif-jp font-bold text-center mb-8">系列施設のご案内</h3>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-xl font-bold text-orange-600">音楽をあなたに</h4>
+                        <i class="fas fa-music text-2xl text-orange-600"></i>
+                    </div>
+                    <p class="mb-4 leading-relaxed">
+                        同じ運営元による音楽を通じた社会貢献プロジェクト。
+                        経済的困難や障がい等の理由で音楽コンサートに参加しづらい方々へ、
+                        無料で音楽を届ける支援活動を実施しています。
+                    </p>
+                    <div class="bg-gray-50 rounded p-4 mb-4">
+                        <p class="text-sm font-bold mb-2">主な活動：</p>
+                        <ul class="text-sm space-y-1">
+                            <li>・児童養護施設、障がい者施設での無料コンサート</li>
+                            <li>・コンサートホール「あいんぐホール」の運営</li>
+                            <li>・チャリティーCD・書籍の販売</li>
+                            <li>・ラジオ番組「音楽をあなたに」の放送</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://aing-music.com/" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center space-x-2 bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors">
+                            <span>詳しくはこちら</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせフォーム -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-serif-jp font-bold text-center mb-16">お問い合わせ</h2>
+                
+                <form id="contact-form" class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="mb-6">
+                        <label for="name" class="block text-sm font-bold mb-2">お名前 <span class="text-red-500">*</span></label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500" placeholder="山田 太郎">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-bold mb-2">メールアドレス <span class="text-red-500">*</span></label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500" placeholder="example@email.com">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="phone" class="block text-sm font-bold mb-2">電話番号</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500" placeholder="090-1234-5678">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="subject" class="block text-sm font-bold mb-2">お問い合わせ種別 <span class="text-red-500">*</span></label>
+                        <select id="subject" name="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500">
+                            <option value="">選択してください</option>
+                            <option value="商品について">商品について</option>
+                            <option value="体験予約">体験予約</option>
+                            <option value="体験ツアー">体験ツアーについて</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-bold mb-2">お問い合わせ内容 <span class="text-red-500">*</span></label>
+                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500" placeholder="お問い合わせ内容をご記入ください"></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition-colors font-bold">
+                            送信する
+                        </button>
+                    </div>
+                </form>
+                
+                <div id="form-message" class="mt-4 text-center hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer id="access" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- アクセス情報 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">アクセス</h3>
+                    <p class="text-sm mb-2">
+                        <i class="fas fa-map-marker-alt mr-2"></i>
+                        〒651-1421<br>
+                        兵庫県西宮市山口町名来1-22-7
+                    </p>
+                    <p class="text-sm mb-2">
+                        <i class="fas fa-car mr-2"></i>
+                        無料駐車場あり
+                    </p>
+                    <div class="mt-4 text-sm space-y-1">
+                        <p><strong>車でお越しの方</strong></p>
+                        <p>・中国自動車道 西宮北ICより約5分</p>
+                        <p><strong>電車でお越しの方</strong></p>
+                        <p>・神戸電鉄 二郎駅から車で約5分</p>
+                        <p>・神戸電鉄 三田駅から車で約15分</p>
+                    </div>
+                </div>
+                
+                <!-- お問い合わせ -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">お問い合わせ</h3>
+                    <p class="text-sm mb-2">
+                        <i class="fas fa-phone mr-2"></i>
+                        <a href="tel:078-223-5590" class="hover:text-orange-400 transition-colors">078-223-5590</a>
+                    </p>
+                    <p class="text-sm mb-4">
+                        <i class="fas fa-clock mr-2"></i>
+                        営業時間：10:00〜17:00<br>
+                        <span class="ml-6">定休日：月曜日・火曜日</span>
+                    </p>
+                    <a href="#contact" class="inline-block bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700 transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>
+                        お問い合わせフォーム
+                    </a>
+                </div>
+                
+                <!-- SNS -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">SNS</h3>
+                    <a href="https://www.instagram.com/aing_lamp" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center space-x-2 bg-pink-600 px-4 py-2 rounded-lg hover:bg-pink-700 transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                        <span>@aing_lamp</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-sm">&copy; 2024 あいんぐらんぷ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
