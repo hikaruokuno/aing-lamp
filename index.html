@@ -134,6 +134,124 @@
         .float-animation {
             animation: float 3s ease-in-out infinite;
         }
+        
+        /* ランプアニメーション */
+        @keyframes flicker {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+            25% {
+                opacity: 0.9;
+                transform: scale(0.98) translateY(-1px);
+            }
+            50% {
+                opacity: 0.95;
+                transform: scale(1.02) translateY(-2px);
+            }
+            75% {
+                opacity: 0.92;
+                transform: scale(0.99) translateY(-1px);
+            }
+        }
+        
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(255, 183, 77, 0.6),
+                           0 0 40px rgba(255, 183, 77, 0.4),
+                           0 0 60px rgba(255, 183, 77, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(255, 183, 77, 0.8),
+                           0 0 50px rgba(255, 183, 77, 0.6),
+                           0 0 70px rgba(255, 183, 77, 0.3);
+            }
+        }
+        
+        @keyframes pulse-light {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.3;
+            }
+        }
+        
+        /* ランプコンテナ */
+        .lamp-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        /* 炎のアニメーション */
+        .flame {
+            animation: flicker 2s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+        
+        /* 光のエフェクト */
+        .lamp-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255, 183, 77, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse-light 3s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        /* ランプアイコンのホバーエフェクト */
+        .lamp-icon {
+            position: relative;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .lamp-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .lamp-icon::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle, rgba(255, 138, 101, 0.4) 0%, transparent 60%);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        .lamp-icon:hover::after {
+            opacity: 1;
+        }
+        
+        /* キャンドルライト効果 */
+        .candle-light {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .candle-light::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(255, 183, 77, 0.1) 0%, transparent 40%);
+            animation: flicker 4s ease-in-out infinite alternate;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800">
@@ -143,7 +261,7 @@
             <nav class="flex justify-between items-center">
                 <!-- ロゴ -->
                 <a href="#home" class="text-2xl font-serif-jp font-bold logo-text flex items-center space-x-2">
-                    <i class="fas fa-burn text-xl"></i>
+                    <i class="fas fa-burn text-xl flame"></i>
                     <span>あいんぐらんぷ</span>
                 </a>
                 
@@ -190,6 +308,10 @@
         
         <!-- コンテンツ -->
         <div class="relative z-10 text-center px-4">
+            <div class="lamp-container inline-block mb-6">
+                <i class="fas fa-burn text-6xl text-orange-300 flame"></i>
+                <div class="lamp-glow"></div>
+            </div>
             <h1 class="text-3xl md:text-5xl font-serif-jp font-bold mb-6 text-white drop-shadow-lg">
                 灯りと共に<br>
                 <span class="text-orange-300">心が奏でるメロディーを</span>
@@ -262,7 +384,7 @@
             <!-- 6つの特徴 -->
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center space-y-4">
-                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center lamp-icon">
                         <i class="fas fa-hands-helping text-3xl text-orange-600"></i>
                     </div>
                     <h4 class="font-bold">福祉×音楽×癒し</h4>
@@ -270,7 +392,7 @@
                 </div>
                 
                 <div class="text-center space-y-4">
-                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center lamp-icon">
                         <i class="fas fa-tree text-3xl text-orange-600"></i>
                     </div>
                     <h4 class="font-bold">流木の温もり</h4>
@@ -278,7 +400,7 @@
                 </div>
                 
                 <div class="text-center space-y-4">
-                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center lamp-icon">
                         <i class="fas fa-umbrella-beach text-3xl text-orange-600"></i>
                     </div>
                     <h4 class="font-bold">沖永良部島の風</h4>
@@ -286,7 +408,7 @@
                 </div>
                 
                 <div class="text-center space-y-4">
-                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center lamp-icon">
                         <i class="fas fa-hand-sparkles text-3xl text-orange-600"></i>
                     </div>
                     <h4 class="font-bold">五感を揺さぶる手仕事</h4>
@@ -294,7 +416,7 @@
                 </div>
                 
                 <div class="text-center space-y-4">
-                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
+                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center lamp-icon">
                         <i class="fas fa-heart text-3xl text-orange-600"></i>
                     </div>
                     <h4 class="font-bold">みんなで作る温もり</h4>
@@ -302,8 +424,8 @@
                 </div>
                 
                 <div class="text-center space-y-4">
-                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
-                        <i class="fas fa-fire text-3xl text-orange-600"></i>
+                    <div class="w-20 h-20 mx-auto bg-orange-100 rounded-full flex items-center justify-center lamp-icon">
+                        <i class="fas fa-fire text-3xl text-orange-600 flame"></i>
                     </div>
                     <h4 class="font-bold">小さなアウトドア空間</h4>
                     <p class="text-sm">中庭には焚き火台やウッドデッキがあり、特別な時間を過ごせます</p>
@@ -319,7 +441,7 @@
             
             <!-- らぶキャン -->
             <div class="mb-20">
-                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden candle-light">
                     <div class="md:flex">
                         <div class="md:w-1/2">
                             <div class="bg-pink-100 h-80 flex items-center justify-center">
@@ -348,7 +470,7 @@
             
             <!-- アルコールランプ -->
             <div class="mb-20">
-                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden candle-light">
                     <div class="md:flex">
                         <div class="md:w-1/2 order-2">
                             <div class="bg-orange-100 h-80 flex items-center justify-center">
@@ -503,50 +625,45 @@
     <!-- ひだまりサロン＆関連施設 -->
     <section class="py-12 bg-orange-50">
         <div class="container mx-auto px-4">
-            <!-- ひだまりサロン -->
-            <div class="max-w-2xl mx-auto text-center mb-12">
-                <div class="inline-block bg-white rounded-lg shadow-md p-8">
-                    <h3 class="text-sm text-gray-600 mb-2">音楽&灯り 就労継続支援B型</h3>
-                    <h2 class="text-2xl font-serif-jp font-bold mb-4">ひだまりサロン</h2>
-                    <p class="text-gray-700 mb-4">
-                        障がいある方が<br>
-                        自分らしく生き生き<br>
-                        活動できる場所
-                    </p>
-                    <p class="text-sm text-gray-600">
-                        詳しくはお問い合わせください
-                    </p>
-                </div>
-            </div>
-            
             <!-- 関連施設 -->
             <div class="max-w-4xl mx-auto">
                 <h3 class="text-2xl font-serif-jp font-bold text-center mb-8">系列施設のご案内</h3>
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <div class="flex items-center justify-between mb-4">
-                        <h4 class="text-xl font-bold text-orange-600">音楽をあなたに</h4>
-                        <i class="fas fa-music text-2xl text-orange-600"></i>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- ひだまりサロン -->
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-sm text-gray-600 mb-2">音楽&灯り 就労継続支援B型</h4>
+                            <i class="fas fa-hands-helping text-2xl text-orange-600"></i>
+                        </div>
+                        <h2 class="text-xl font-serif-jp font-bold mb-4">ひだまりサロン</h2>
+                        <p class="text-gray-700 mb-4">
+                            障がいある方が<br>
+                            自分らしく生き生き<br>
+                            活動できる場所
+                        </p>
+                        <p class="text-sm text-gray-600">
+                            詳しくはお問い合わせください
+                        </p>
                     </div>
-                    <p class="mb-4 leading-relaxed">
-                        同じ運営元による音楽を通じた社会貢献プロジェクト。
-                        経済的困難や障がい等の理由で音楽コンサートに参加しづらい方々へ、
-                        無料で音楽を届ける支援活動を実施しています。
-                    </p>
-                    <div class="bg-gray-50 rounded p-4 mb-4">
-                        <p class="text-sm font-bold mb-2">主な活動：</p>
-                        <ul class="text-sm space-y-1">
-                            <li>・児童養護施設、障がい者施設での無料コンサート</li>
-                            <li>・コンサートホール「あいんぐホール」の運営</li>
-                            <li>・チャリティーCD・書籍の販売</li>
-                            <li>・ラジオ番組「音楽をあなたに」の放送</li>
-                        </ul>
-                    </div>
-                    <div class="text-center">
-                        <a href="https://aing-music.com/" target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center space-x-2 bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors">
-                            <span>詳しくはこちら</span>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
+                    
+                    <!-- 音楽をあなたに -->
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-xl font-bold text-orange-600">音楽をあなたに</h4>
+                            <i class="fas fa-music text-2xl text-orange-600"></i>
+                        </div>
+                        <p class="mb-4 leading-relaxed text-sm">
+                            同じ運営元による音楽を通じた社会貢献プロジェクト。
+                            経済的困難や障がい等の理由で音楽コンサートに参加しづらい方々へ、
+                            無料で音楽を届ける支援活動を実施しています。
+                        </p>
+                        <div class="text-center">
+                            <a href="https://aing-music.com/" target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center space-x-2 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-sm">
+                                <span>詳しくはこちら</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
