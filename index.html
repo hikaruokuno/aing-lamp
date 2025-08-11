@@ -252,6 +252,13 @@
             animation: flicker 4s ease-in-out infinite alternate;
             pointer-events: none;
         }
+        
+        /* モバイル向けの動画スタイル調整 */
+        @media (max-width: 768px) {
+            video {
+                object-position: center center;
+            }
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800">
@@ -297,12 +304,13 @@
 
     <!-- ヒーローセクション -->
     <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- 背景画像 -->
+        <!-- 背景動画 -->
         <div class="absolute inset-0">
-            <picture>
-                <source media="(max-width: 768px)" srcset="images/hero-mobile.jpg">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                <source src="movies/top.mp4" type="video/mp4">
+                <!-- フォールバック画像（動画が再生できない場合） -->
                 <img src="images/hero-desktop.jpg" alt="あいんぐらんぷ - らぶキャン" class="w-full h-full object-cover">
-            </picture>
+            </video>
             <div class="absolute inset-0 bg-black/20"></div>
         </div>
         
