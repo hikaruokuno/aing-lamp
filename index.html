@@ -260,7 +260,6 @@
             <nav class="flex justify-between items-center">
                 <!-- ロゴ -->
                 <a href="#home" class="text-2xl font-serif-jp font-bold logo-text flex items-center space-x-2">
-                    <i class="fas fa-burn text-xl flame"></i>
                     <span>あいんぐらんぷ</span>
                 </a>
                 
@@ -269,6 +268,8 @@
                     <li><a href="#home" class="hover:text-rose-700 transition-colors">ホーム</a></li>
                     <li><a href="#about" class="hover:text-rose-700 transition-colors">私たちについて</a></li>
                     <li><a href="#products" class="hover:text-rose-700 transition-colors">商品紹介</a></li>
+                    <li><a href="#subscription" class="hover:text-rose-700 transition-colors">灯りと手紙</a></li>
+                    <li><a href="#owner" class="hover:text-rose-700 transition-colors">オーナー紹介</a></li>
                     <li><a href="#gallery" class="hover:text-rose-700 transition-colors">ギャラリー</a></li>
                     <li><a href="#tour" class="hover:text-rose-700 transition-colors">体験ツアー</a></li>
                     <li><a href="#access" class="hover:text-rose-700 transition-colors">アクセス</a></li>
@@ -286,6 +287,8 @@
                     <li><a href="#home" class="block hover:text-rose-700 transition-colors">ホーム</a></li>
                     <li><a href="#about" class="block hover:text-rose-700 transition-colors">私たちについて</a></li>
                     <li><a href="#products" class="block hover:text-rose-700 transition-colors">商品紹介</a></li>
+                    <li><a href="#subscription" class="block hover:text-rose-700 transition-colors">灯りと手紙</a></li>
+                    <li><a href="#owner" class="block hover:text-rose-700 transition-colors">オーナー紹介</a></li>
                     <li><a href="#gallery" class="block hover:text-rose-700 transition-colors">ギャラリー</a></li>
                     <li><a href="#tour" class="block hover:text-rose-700 transition-colors">体験ツアー</a></li>
                     <li><a href="#access" class="block hover:text-rose-700 transition-colors">アクセス</a></li>
@@ -299,7 +302,7 @@
         <!-- 背景動画 -->
         <div class="absolute inset-0">
             <video autoplay muted loop playsinline class="w-full h-full object-cover">
-                <source src="movies/top.mp4" type="video/mp4">
+                <source src="movies/top_movie.mp4" type="video/mp4">
                 <!-- フォールバック画像（動画が再生できない場合） -->
                 <img src="images/hero-desktop.jpg" alt="あいんぐらんぷ - らぶキャン" class="w-full h-full object-cover">
             </video>
@@ -317,12 +320,20 @@
                 唯一無二の場所で灯りをお届け
             </p>
             
-            <!-- Instagramリンク -->
-            <a href="https://www.instagram.com/aing_lamp" target="_blank" rel="noopener noreferrer" 
-               class="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <i class="fab fa-instagram text-2xl text-pink-600"></i>
-                <span class="font-bold">@aing_lamp</span>
-            </a>
+            <!-- SNSリンク -->
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                <!-- Instagramリンク -->
+                <a href="https://www.instagram.com/aing_lamp" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <i class="fab fa-instagram text-2xl text-pink-600"></i>
+                    <span class="font-bold">@aing_lamp</span>
+                </a>
+                
+                <!-- LINE友だち追加 -->
+                <a href="https://lin.ee/kEiqF9n" target="_blank" rel="noopener noreferrer">
+                    <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0" class="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                </a>
+            </div>
         </div>
         
         <!-- スクロール誘導 -->
@@ -462,7 +473,7 @@
                         </div>
                         <div class="md:w-1/2 p-8 order-1">
                             <h3 class="text-2xl font-bold mb-4 text-purple-600">音と香りと、わたし。</h3>
-                            <p class="text-lg font-bold mb-2">¥2,800</p>
+                            <p class="text-lg font-bold mb-2">¥3,000</p>
                             <p class="mb-4">
                                 木芯が放つ焚き火のようなパチパチ音と、植物から算出される精油の香りが織りなす癒し。
                             </p>
@@ -518,17 +529,15 @@
                                 火を灯せば優しい光がハートをふんわりと照らし出し、お部屋をあたたかく甘い雰囲気で満たしてくれます。
                             </p>
                             <div class="bg-pink-50 p-4 rounded-lg">
-                                <p class="text-sm font-bold mb-2">体験も可能！</p>
                                 <p class="text-sm">
                                     「今の気分のよう」「来る時の夕焼け空が綺麗だったから」
-                                    素敵なストーリーと共に生まれる、らぶキャン作りはご予約制です。
+                                    あなたのストーリーが世界に一つの灯りになる時間...
                                 </p>
                                 <p class="text-sm font-bold mt-2">体験料金：¥2,000（作品付き）</p>
                                 
                                 <!-- 体験の様子 -->
-                                <div class="grid grid-cols-2 gap-2 mt-4">
-                                    <img src="images/taiken_01.jpg" alt="らぶキャン体験 - 色選び" class="w-full rounded-lg">
-                                    <img src="images/taiken_02.jpg" alt="らぶキャン体験 - 制作中" class="w-full rounded-lg">
+                                <div class="mt-4">
+                                    <img src="images/taiken_01.jpg" alt="らぶキャン体験" class="w-full rounded-lg">
                                 </div>
                             </div>
                         </div>
@@ -609,8 +618,153 @@
         </div>
     </section>
     
+    <!-- サブスクリプション「灯りと手紙」 -->
+    <section id="subscription" class="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-serif-jp font-bold text-center mb-8 text-rose-700">灯りと手紙</h2>
+                
+                <p class="text-xl text-center font-serif-jp mb-12">始まりは、あなた自身との対話。</p>
+                
+                <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                    <p class="text-lg leading-relaxed mb-6">
+                        誰にも言えない心の疲れ、そっと飲み込んでいる「おつかれさま」<br>
+                        今のあなたの心に、静かに寄り添う時間をお届けいたします
+                    </p>
+                    
+                    <p class="text-lg leading-relaxed mb-6">
+                        あいんぐらんぷのオーナー、藤原愛が心を込めて創り上げた、特別なサブスクリプション『灯りと手紙』<br>
+                        それは、言葉と光が織りなす、あなただけの癒しの世界。<br>
+                        キャンドルの温もり、詩の言葉、そして声の温もりが、五感を通して、疲れた心にそっと光を灯します。
+                    </p>
+                    
+                    <!-- サブスク画像 -->
+                    <div class="mb-8">
+                        <img src="images/sabscribe.jpg" alt="灯りと手紙 - キャンドルと手紙" class="w-full max-w-2xl mx-auto rounded-lg shadow-md">
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-6 text-rose-700">【サブスクに含まれるもの】</h3>
+                    <p class="text-lg font-bold mb-6">五感を満たす、癒しの時間</p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div>
+                            <h4 class="text-lg font-bold mb-2">①世界に一つだけの、<span class="text-rose-600">あなただけの詩</span>とアロマキャンドル</h4>
+                            <p class="leading-relaxed">
+                                毎月、その時のあなたの心に捧げる、世界に一つの詩を記した手紙をお届けします。<br>
+                                火を灯せば優しい香りと光が広がる、手作りのアロマキャンドルと共に、あなたの心に温かい光を灯します。
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold mb-2">②毎日届く、心のお守り</h4>
+                            <p class="leading-relaxed">
+                                毎日、あなたに届く小さな「今日の詩」。<br>
+                                日々の心の光を少しずつ育み、心の平穏を保つお手伝いをいたします。
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold mb-2">③毎週、声の温もり</h4>
+                            <p class="leading-relaxed">
+                                非公開ラジオでは、藤原愛の声によるお話や簡単な瞑想誘導を...。
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-bold mb-2">④<span class="text-rose-600">あなただけの</span>、大切な対話</h4>
+                            <p class="leading-relaxed">
+                                月に一度、30分の電話セッション。誰にも言えない心のざわめきや、あなたの想いを藤原愛に話してください。<br>
+                                安心感に包まれる、<span class="font-bold">あなただけの対話の時間</span>。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center bg-rose-50 rounded-xl p-8">
+                        <p class="text-2xl font-bold mb-4 text-rose-700">心満たされる、特別なご褒美</p>
+                        <p class="text-4xl font-bold text-rose-700 mb-6">月額 15,000円</p>
+                        
+                        <p class="text-lg leading-relaxed mb-4">
+                            これは、単なる商品の購入ではありません。<br>
+                            あなたが心を大切にするための、大切なご褒美。<br>
+                            1日500円という自分への小さな贈り物で、心の平穏を取り戻しませんか？
+                        </p>
+                        
+                        <p class="text-lg font-serif-jp">
+                            『灯りと手紙』が、あなたの心に寄り添い、<br>
+                            明日への希望を紡ぐ存在となりますように...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- オーナー紹介 -->
+    <section id="owner" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-serif-jp font-bold text-center mb-12">この灯りが生まれる、私の物語。</h2>
+                
+                <div class="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl shadow-lg p-8 mb-12">
+                    <p class="text-lg leading-relaxed mb-6">
+                        はじめまして。<br>
+                        あいんぐらんぷのオーナー、藤原愛と申します。
+                    </p>
+                    
+                    <p class="text-lg leading-relaxed mb-6">
+                        私は、自身の経験から、言葉や光、そして音楽が持つ「癒しの力」を深く信じています。<br>
+                        言葉は、時に心の奥底にある感情をそっと引き出し、光は、暗闇に迷う心を温めてくれます。<br>
+                        そして音楽は静かに心を揺さぶる力を持っています。
+                    </p>
+                    
+                    <p class="text-lg leading-relaxed mb-8">
+                        この場所は、そんな３つの要素が交わる、あなただけの特別な空間です。
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-rose-700">言葉がくれた光</h3>
+                            <p class="leading-relaxed">
+                                不登校だった10代の頃、私は「詩」と出会いました。言葉を紡ぐことが、自分の心を整理し、生きる光を見つけるきっかけとなりました。<br>
+                                故郷である鹿児島県指定文化財・天然記念物の「昇竜洞」には、私が綴った詩の詩碑が建っています。
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-rose-700">心に語りかける声</h3>
+                            <p class="leading-relaxed">
+                                詩だけでなく、ラジオパーソナリティとしても活動しています。言葉にメロディーが加わることで、より深く心に響き、人の心を動かすことができることを知りました。
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-rose-700">心に寄り添う、私の役割</h3>
+                            <p class="leading-relaxed">
+                                福祉と音楽、癒しの融合施設を運営する中で、形に捉われない独自のセッションを展開。<br>
+                                私がこれまで歩んできた道のりは、すべて、人の心に光を灯すためのものでした。<br>
+                                一人ひとりの心に灯りを届けること。それが、私の心からの願いです。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-10">
+                        <p class="text-xl font-serif-jp mb-4">
+                            あなたに心から癒される時間と、<br>
+                            明日への希望が訪れますように...
+                        </p>
+                        
+                        <div class="mt-6">
+                            <p class="text-lg font-bold text-rose-700">オーナー / 灯りと言葉のセラピスト</p>
+                            <p class="text-2xl font-serif-jp font-bold mt-2">藤原 愛</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ギャラリー -->
-    <section id="gallery" class="py-20 bg-white">
+    <section id="gallery" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-serif-jp font-bold text-center mb-16">ギャラリー</h2>
             
@@ -628,30 +782,6 @@
                     <img src="images/gallery/tennai.jpg" alt="店内の様子" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                         <p class="text-white font-bold">店内</p>
-                    </div>
-                </div>
-                
-                <!-- キャンドル1 -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
-                    <img src="images/gallery/candol_01.jpg" alt="キャンドル" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                        <p class="text-white font-bold">キャンドル</p>
-                    </div>
-                </div>
-                
-                <!-- キャンドル2 -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
-                    <img src="images/gallery/candol_02.jpg" alt="キャンドル" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                        <p class="text-white font-bold">キャンドル</p>
-                    </div>
-                </div>
-                
-                <!-- キャンドル3 -->
-                <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
-                    <img src="images/gallery/candol_03.jpg" alt="キャンドル" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                        <p class="text-white font-bold">キャンドル</p>
                     </div>
                 </div>
                 
@@ -839,7 +969,6 @@
                         <select id="subject" name="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-rose-600">
                             <option value="">選択してください</option>
                             <option value="商品について">商品について</option>
-                            <option value="体験予約">体験予約</option>
                             <option value="体験ツアー">体験ツアーについて</option>
                             <option value="その他">その他</option>
                         </select>
@@ -878,13 +1007,6 @@
                         <i class="fas fa-car mr-2"></i>
                         無料駐車場あり
                     </p>
-                    <div class="mt-4 text-sm space-y-1">
-                        <p><strong>車でお越しの方</strong></p>
-                        <p>・中国自動車道 西宮北ICより約5分</p>
-                        <p><strong>電車でお越しの方</strong></p>
-                        <p>・神戸電鉄 二郎駅から車で約5分</p>
-                        <p>・神戸電鉄 三田駅から車で約15分</p>
-                    </div>
                 </div>
                 
                 <!-- お問い合わせ -->
@@ -896,8 +1018,9 @@
                     </p>
                     <p class="text-sm mb-4">
                         <i class="fas fa-clock mr-2"></i>
-                        営業時間：10:00〜17:00<br>
-                        <span class="ml-6">定休日：月曜日・火曜日</span>
+                        不定休です。<br>
+                        <span class="ml-6">営業日をご確認の上</span><br>
+                        <span class="ml-6">ご来店くださいませ。</span>
                     </p>
                     <a href="#contact" class="inline-block bg-rose-700 text-white px-4 py-2 rounded hover:bg-rose-800 transition-colors">
                         <i class="fas fa-envelope mr-2"></i>
@@ -908,11 +1031,20 @@
                 <!-- SNS -->
                 <div>
                     <h3 class="text-xl font-bold mb-4">SNS</h3>
-                    <a href="https://www.instagram.com/aing_lamp" target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center space-x-2 bg-pink-600 px-4 py-2 rounded-lg hover:bg-pink-700 transition-colors">
-                        <i class="fab fa-instagram text-xl"></i>
-                        <span>@aing_lamp</span>
-                    </a>
+                    <div class="space-y-3">
+                        <a href="https://www.instagram.com/aing_lamp" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center space-x-2 bg-pink-600 px-4 py-2 rounded-lg hover:bg-pink-700 transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                            <span>@aing_lamp</span>
+                        </a>
+                        
+                        <div>
+                            <p class="text-sm mb-2">公式LINE</p>
+                            <a href="https://lin.ee/kEiqF9n" target="_blank" rel="noopener noreferrer">
+                                <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             
