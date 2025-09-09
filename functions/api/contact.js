@@ -5,6 +5,7 @@ export async function onRequestPost(context) {
     'Access-Control-Allow-Headers': 'Content-Type',
   };
 
+
   // Handle OPTIONS request for CORS
   if (context.request.method === 'OPTIONS') {
     return new Response(null, {
@@ -20,8 +21,21 @@ export async function onRequestPost(context) {
       email,
       phone,
       subject,
-      message
+      message,
+      website // ハニーポットフィールド
     } = body;
+
+    // ハニーポットチェック（ボットはこのフィールドに入力してしまう）
+    if (website) {
+      console.log('Spam detected: honeypot field filled');
+      return new Response(
+        JSON.stringify({ success: true, message: 'お問い合わせありがとうございます。' }),
+        { 
+          status: 200,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+        }
+      );
+    }
 
     // Validate input
     if (!name || !email || !message) {

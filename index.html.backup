@@ -268,8 +268,6 @@
                     <li><a href="#home" class="hover:text-rose-700 transition-colors">ホーム</a></li>
                     <li><a href="#about" class="hover:text-rose-700 transition-colors">私たちについて</a></li>
                     <li><a href="#products" class="hover:text-rose-700 transition-colors">商品紹介</a></li>
-                    <li><a href="#subscription" class="hover:text-rose-700 transition-colors">灯りと手紙</a></li>
-                    <li><a href="#owner" class="hover:text-rose-700 transition-colors">オーナー紹介</a></li>
                     <li><a href="#gallery" class="hover:text-rose-700 transition-colors">ギャラリー</a></li>
                     <li><a href="#tour" class="hover:text-rose-700 transition-colors">体験ツアー</a></li>
                     <li><a href="#access" class="hover:text-rose-700 transition-colors">アクセス</a></li>
@@ -287,8 +285,6 @@
                     <li><a href="#home" class="block hover:text-rose-700 transition-colors">ホーム</a></li>
                     <li><a href="#about" class="block hover:text-rose-700 transition-colors">私たちについて</a></li>
                     <li><a href="#products" class="block hover:text-rose-700 transition-colors">商品紹介</a></li>
-                    <li><a href="#subscription" class="block hover:text-rose-700 transition-colors">灯りと手紙</a></li>
-                    <li><a href="#owner" class="block hover:text-rose-700 transition-colors">オーナー紹介</a></li>
                     <li><a href="#gallery" class="block hover:text-rose-700 transition-colors">ギャラリー</a></li>
                     <li><a href="#tour" class="block hover:text-rose-700 transition-colors">体験ツアー</a></li>
                     <li><a href="#access" class="block hover:text-rose-700 transition-colors">アクセス</a></li>
@@ -433,188 +429,6 @@
         </div>
     </section>
 
-    <!-- 商品紹介 -->
-    <section id="products" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-serif-jp font-bold text-center mb-16">商品紹介</h2>
-            
-            <!-- 波の調べ -->
-            <div class="mb-20">
-                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden candle-light">
-                    <div class="md:flex">
-                        <div class="md:w-1/2">
-                            <div class="grid grid-cols-2 h-96">
-                                <img src="images/shohin_01.jpg" alt="波の調べ - 海をテーマにしたキャンドル" class="w-full h-full object-cover">
-                                <img src="images/shohin_05.jpg" alt="波の調べ - 流木と海のキャンドル" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 p-8">
-                            <h3 class="text-2xl font-bold mb-4 text-blue-600">波の調べ</h3>
-                            <p class="text-lg font-bold mb-2">¥1,000〜</p>
-                            <p class="mb-4">
-                                波の音が聴こえてきそう<br>
-                                海の呼吸を感じて...
-                            </p>
-                            <p class="mb-4">
-                                まるで、ここは海。<br>
-                                南国の恵み溢れる海の世界をお楽しみくださいませ。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 音と香りと、わたし。 -->
-            <div class="mb-20">
-                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden candle-light">
-                    <div class="md:flex">
-                        <div class="md:w-1/2 order-2">
-                            <img src="images/shohin_02.jpg" alt="音と香りと、わたし。 - 天然石入りアロマキャンドル" class="w-full h-96 object-cover">
-                        </div>
-                        <div class="md:w-1/2 p-8 order-1">
-                            <h3 class="text-2xl font-bold mb-4 text-purple-600">音と香りと、わたし。</h3>
-                            <p class="text-lg font-bold mb-2">¥3,000</p>
-                            <p class="mb-4">
-                                木芯が放つ焚き火のようなパチパチ音と、植物から算出される精油の香りが織りなす癒し。
-                            </p>
-                            <p class="mb-4">
-                                長い年月をかけ、大地が育んだ天然石のヒーリング効果が加わり、唯一無二の美しさが溶け合う 優しい時間を。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 瑠璃色の地球 -->
-            <div class="mb-20">
-                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden candle-light">
-                    <div class="md:flex">
-                        <div class="md:w-1/2">
-                            <img src="images/shohin_04.jpg" alt="瑠璃色の地球 - 流木とガラスのキャンドルホルダー" class="w-full h-96 object-cover">
-                        </div>
-                        <div class="md:w-1/2 p-8">
-                            <h3 class="text-2xl font-bold mb-4 text-blue-700">瑠璃色の地球</h3>
-                            <p class="text-lg font-bold mb-2">¥3,300</p>
-                            <p class="mb-4">
-                                心が洗われるような「透明感」と「清らかさ」<br>
-                                昔から多くの人に憧れられてきた最も美しい青。
-                            </p>
-                            <p class="mb-4">
-                                ひとつひとつ形の異なる流木にガラスを流し込み、丁寧に仕上げられたキャンドルホルダーは、同じものはふたつとない唯一無二の製品。
-                            </p>
-                            <p class="text-sm bg-blue-50 p-3 rounded-lg">
-                                <i class="fas fa-star text-blue-600 mr-2"></i>
-                                灯し終わった後は、オブジェや小物入れとしても楽しめます。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- らぶキャン -->
-            <div class="mb-20">
-                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden candle-light">
-                    <div class="md:flex">
-                        <div class="md:w-1/2 order-2">
-                            <img src="images/shohin_03_01.jpg" alt="らぶキャン - ハート型キャンドル" class="w-full h-96 object-cover">
-                        </div>
-                        <div class="md:w-1/2 p-8 order-1">
-                            <h3 class="text-2xl font-bold mb-4 text-pink-600">らぶキャン</h3>
-                            <p class="text-lg font-bold mb-2">¥1,200〜</p>
-                            <p class="mb-4">
-                                手のひらサイズのガラス瓶に、たくさんのハートを詰め込んだロマンティックなキャンドル。
-                                火を灯せば優しい光がハートをふんわりと照らし出し、お部屋をあたたかく甘い雰囲気で満たしてくれます。
-                            </p>
-                            <div class="bg-pink-50 p-4 rounded-lg">
-                                <p class="text-sm">
-                                    「今の気分のよう」「来る時の夕焼け空が綺麗だったから」
-                                    あなたのストーリーが世界に一つの灯りになる時間...
-                                </p>
-                                <p class="text-sm font-bold mt-2">体験料金：¥2,000（作品付き）</p>
-                                
-                                <!-- 体験の様子 -->
-                                <div class="mt-4">
-                                    <img src="images/taiken_01.jpg" alt="らぶキャン体験" class="w-full rounded-lg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- アルコールランプ -->
-            <div class="mb-20">
-                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden candle-light">
-                    <div class="md:flex">
-                        <div class="md:w-1/2">
-                            <img src="images/alcohollamp.jpg" alt="あいんぐランプ - オリジナルアルコールランプ" class="w-full h-96 object-cover">
-                        </div>
-                        <div class="md:w-1/2 p-8">
-                            <p class="text-sm text-gray-600 mb-1">オリジナルアルコールランプ</p>
-                            <h3 class="text-3xl font-bold mb-4 text-rose-700">あいんぐランプ</h3>
-                            <p class="text-2xl font-bold mb-4">¥8,000</p>
-                            <p class="text-lg font-bold mb-2 text-rose-600">
-                                いつもどこでも何度でも<br>
-                                あなたに寄り添う あいんぐランプ
-                            </p>
-                            <div class="bg-rose-50 p-4 rounded-lg mb-4">
-                                <p class="text-sm font-bold mb-1">〜完全オリジナル〜</p>
-                                <p class="text-sm">あいんぐらんぷ×TETSU屋 コラボ商品</p>
-                            </div>
-                            <p class="mb-4">
-                                アウトドア、インドア...<br>
-                                シーンを選ばない幅広い場面で使えるポータブル式ランプです。
-                            </p>
-                            <p class="mb-4">
-                                コンパクトでどこにでも持ち歩け火力調整も簡単。
-                            </p>
-                            <p class="text-sm bg-amber-50 p-3 rounded-lg">
-                                <i class="fas fa-lightbulb text-amber-600 mr-2"></i>
-                                お気に入りのカップや容器に挿して、あなただけのアルコールランプに！
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- カスタムオーダー -->
-            <div class="mb-20">
-                <div class="max-w-4xl mx-auto bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl shadow-lg p-8">
-                    <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold mb-2">手作りキャンドル</h3>
-                        <p class="text-xl font-bold text-rose-600">リクエスト大歓迎！</p>
-                    </div>
-                    <div class="bg-white rounded-lg p-6">
-                        <p class="text-lg font-bold mb-4 text-gray-700">例えば...</p>
-                        <div class="space-y-4 mb-6">
-                            <div class="flex items-start space-x-3">
-                                <i class="fas fa-gift text-rose-500 mt-1"></i>
-                                <p class="text-gray-700">
-                                    お誕生日のプレゼント用だから 贈る相手の誕生石を入れてほしい！
-                                </p>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <i class="fas fa-music text-rose-500 mt-1"></i>
-                                <p class="text-gray-700">
-                                    大好きな歌からイメージできるキャンドルを作ってほしい！
-                                </p>
-                            </div>
-                        </div>
-                        <p class="text-center text-lg">
-                            など...ぜひご希望をお聞かせ下さいね☆
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- その他の商品 -->
-            <div class="text-center">
-                <p class="text-lg mb-4">その他、季節のキャンドルやドリンクキャンドルなどお楽しみいただけます。</p>
-                <p class="text-sm text-gray-600">※価格は全て税込表示です</p>
-            </div>
-        </div>
-    </section>
-    
     <!-- サブスクリプション「灯りと手紙」 -->
     <section id="subscription" class="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
         <div class="container mx-auto px-4">
@@ -760,6 +574,191 @@
         </div>
     </section>
 
+    <!-- 商品紹介 -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif-jp font-bold text-center mb-16">商品紹介</h2>
+            
+            <!-- 波の調べ -->
+            <div class="mb-20">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden candle-light">
+                    <div class="md:flex">
+                        <div class="md:w-1/2">
+                            <div class="grid grid-cols-2 h-96">
+                                <img src="images/shohin_01.jpg" alt="波の調べ - 海をテーマにしたキャンドル" class="w-full h-full object-cover">
+                                <img src="images/shohin_05.jpg" alt="波の調べ - 流木と海のキャンドル" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <h3 class="text-2xl font-bold mb-4 text-blue-600">波の調べ</h3>
+                            <p class="text-lg font-bold mb-2">¥1,000〜</p>
+                            <p class="mb-4">
+                                波の音が聴こえてきそう<br>
+                                海の呼吸を感じて...
+                            </p>
+                            <p class="mb-4">
+                                まるで、ここは海。<br>
+                                南国の恵み溢れる海の世界をお楽しみくださいませ。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 音と香りと、わたし。 -->
+            <div class="mb-20">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden candle-light">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 order-2">
+                            <img src="images/shohin_02.jpg" alt="音と香りと、わたし。 - 天然石入りアロマキャンドル" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8 order-1">
+                            <h3 class="text-2xl font-bold mb-4 text-purple-600">音と香りと、わたし。</h3>
+                            <p class="text-lg font-bold mb-2">¥3,000</p>
+                            <p class="mb-4">
+                                木芯が放つ焚き火のようなパチパチ音と、植物から算出される精油の香りが織りなす癒し。
+                            </p>
+                            <p class="mb-4">
+                                長い年月をかけ、大地が育んだ天然石のヒーリング効果が加わり、唯一無二の美しさが溶け合う 優しい時間を。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 瑠璃色の地球 -->
+            <div class="mb-20">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden candle-light">
+                    <div class="md:flex">
+                        <div class="md:w-1/2">
+                            <img src="images/shohin_04.jpg" alt="瑠璃色の地球 - 流木とガラスのキャンドルホルダー" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <h3 class="text-2xl font-bold mb-4 text-blue-700">瑠璃色の地球</h3>
+                            <p class="text-lg font-bold mb-2">¥3,300</p>
+                            <p class="mb-4">
+                                心が洗われるような「透明感」と「清らかさ」<br>
+                                昔から多くの人に憧れられてきた最も美しい青。
+                            </p>
+                            <p class="mb-4">
+                                ひとつひとつ形の異なる流木にガラスを流し込み、丁寧に仕上げられたキャンドルホルダーは、同じものはふたつとない唯一無二の製品。
+                            </p>
+                            <p class="text-sm bg-blue-50 p-3 rounded-lg">
+                                <i class="fas fa-star text-blue-600 mr-2"></i>
+                                灯し終わった後は、オブジェや小物入れとしても楽しめます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- らぶキャン -->
+            <div class="mb-20">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden candle-light">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 order-2">
+                            <div class="grid grid-cols-2 h-96">
+                                <img src="images/shohin_03_01.jpg" alt="らぶキャン - ハート型キャンドル" class="w-full h-full object-cover">
+                                <img src="images/shohin_03_02.jpg" alt="らぶキャン - 火を灯した様子" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 p-8 order-1">
+                            <h3 class="text-2xl font-bold mb-4 text-pink-600">らぶキャン</h3>
+                            <p class="text-lg font-bold mb-2">¥1,200〜</p>
+                            <p class="mb-4">
+                                手のひらサイズのガラス瓶に、たくさんのハートを詰め込んだロマンティックなキャンドル。
+                                火を灯せば優しい光がハートをふんわりと照らし出し、お部屋をあたたかく甘い雰囲気で満たしてくれます。
+                            </p>
+                            <div class="bg-pink-50 p-4 rounded-lg">
+                                <p class="text-sm">
+                                    「今の気分のよう」「来る時の夕焼け空が綺麗だったから」
+                                    あなたのストーリーが世界に一つの灯りになる時間...
+                                </p>
+                                <p class="text-sm font-bold mt-2">体験料金：¥2,000（作品付き）</p>
+                                
+                                <!-- 体験の様子 -->
+                                <div class="mt-4">
+                                    <img src="images/taiken_01.jpg" alt="らぶキャン体験" class="w-full rounded-lg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- アルコールランプ -->
+            <div class="mb-20">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden candle-light">
+                    <div class="md:flex">
+                        <div class="md:w-1/2">
+                            <img src="images/alcohollamp.jpg" alt="あいんぐランプ - オリジナルアルコールランプ" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <p class="text-sm text-gray-600 mb-1">オリジナルアルコールランプ</p>
+                            <h3 class="text-3xl font-bold mb-4 text-rose-700">あいんぐランプ</h3>
+                            <p class="text-2xl font-bold mb-4">¥8,000</p>
+                            <p class="text-lg font-bold mb-2 text-rose-600">
+                                いつもどこでも何度でも<br>
+                                あなたに寄り添う あいんぐランプ
+                            </p>
+                            <div class="bg-rose-50 p-4 rounded-lg mb-4">
+                                <p class="text-sm font-bold mb-1">〜完全オリジナル〜</p>
+                                <p class="text-sm">あいんぐらんぷ×TETSU屋 コラボ商品</p>
+                            </div>
+                            <p class="mb-4">
+                                アウトドア、インドア...<br>
+                                シーンを選ばない幅広い場面で使えるポータブル式ランプです。
+                            </p>
+                            <p class="mb-4">
+                                コンパクトでどこにでも持ち歩け火力調整も簡単。
+                            </p>
+                            <p class="text-sm bg-amber-50 p-3 rounded-lg">
+                                <i class="fas fa-lightbulb text-amber-600 mr-2"></i>
+                                お気に入りのカップや容器に挿して、あなただけのアルコールランプに！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- カスタムオーダー -->
+            <div class="mb-20">
+                <div class="max-w-4xl mx-auto bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl shadow-lg p-8">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">手作りキャンドル</h3>
+                        <p class="text-xl font-bold text-rose-600">リクエスト大歓迎！</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6">
+                        <p class="text-lg font-bold mb-4 text-gray-700">例えば...</p>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-gift text-rose-500 mt-1"></i>
+                                <p class="text-gray-700">
+                                    お誕生日のプレゼント用だから 贈る相手の誕生石を入れてほしい！
+                                </p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-music text-rose-500 mt-1"></i>
+                                <p class="text-gray-700">
+                                    大好きな歌からイメージできるキャンドルを作ってほしい！
+                                </p>
+                            </div>
+                        </div>
+                        <p class="text-center text-lg">
+                            など...ぜひご希望をお聞かせ下さいね☆
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- その他の商品 -->
+            <div class="text-center">
+                <p class="text-lg mb-4">その他、季節のキャンドルやドリンクキャンドルなどお楽しみいただけます。</p>
+                <p class="text-sm text-gray-600">※価格は全て税込表示です</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- ギャラリー -->
     <section id="gallery" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
@@ -974,12 +973,6 @@
                     <div class="mb-6">
                         <label for="message" class="block text-sm font-bold mb-2">お問い合わせ内容 <span class="text-red-500">*</span></label>
                         <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-rose-600" placeholder="お問い合わせ内容をご記入ください"></textarea>
-                    </div>
-                    
-                    <!-- ハニーポット（スパム対策用の見えないフィールド） -->
-                    <div style="position: absolute; left: -9999px;">
-                        <label for="website">Website</label>
-                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
                     </div>
                     
                     <div class="text-center">

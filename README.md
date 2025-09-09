@@ -26,6 +26,7 @@ aing-lamp/
 - スクロール時のヘッダー背景変更
 - ギャラリーライトボックス
 - フェードインアニメーション
+- お問い合わせフォーム（※メール送信機能は今後実装予定）
 
 ## セクション構成
 1. ヘッダー（固定ナビゲーション）
@@ -47,9 +48,20 @@ aing-lamp/
    npx http-server
    ```
 
+## デプロイ方法（Cloudflare Pages）
+1. GitHubリポジトリにプッシュ
+2. Cloudflare Pagesでプロジェクトを作成
+3. GitHubリポジトリと連携
+4. 自動デプロイ設定
+
 ## 今後の作業
+- お問い合わせフォームのメール送信機能（Cloudflare Workers実装予定）
 - 実際の画像の追加
-- お問い合わせフォームの実装
 - Google Maps埋め込み
 - SEO最適化（メタタグの追加）
 - アクセシビリティの向上
+
+## メール送信機能の実装予定
+Cloudflare Pagesでの運用のため、以下の方法で実装予定：
+- Cloudflare Workers + Resend/SendGrid API
+- または外部フォームサービス（Formspree等）の利用
