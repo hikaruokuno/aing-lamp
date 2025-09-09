@@ -162,7 +162,9 @@ if (contactForm) {
         const data = {
             name: formData.get('name'),
             email: formData.get('email'),
-            message: `件名: ${formData.get('subject')}\n電話番号: ${formData.get('phone') || 'なし'}\n\n${formData.get('message')}`
+            phone: formData.get('phone'),
+            subject: formData.get('subject'),
+            message: formData.get('message')
         };
         
         try {

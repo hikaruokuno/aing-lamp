@@ -18,6 +18,8 @@ export async function onRequestPost(context) {
     const {
       name,
       email,
+      phone,
+      subject,
       message
     } = body;
 
@@ -69,7 +71,9 @@ export async function onRequestPost(context) {
           <h2>お問い合わせを受信しました</h2>
           <p><strong>お名前:</strong> ${name}</p>
           <p><strong>メールアドレス:</strong> ${email}</p>
-          <p><strong>メッセージ:</strong></p>
+          <p><strong>電話番号:</strong> ${phone || 'なし'}</p>
+          <p><strong>お問い合わせ種別:</strong> ${subject}</p>
+          <p><strong>お問い合わせ内容:</strong></p>
           <p>${message.replace(/\n/g, '<br>')}</p>
           <hr>
           <p style="color: #666; font-size: 12px;">
@@ -81,7 +85,9 @@ export async function onRequestPost(context) {
 
 お名前: ${name}
 メールアドレス: ${email}
-メッセージ:
+電話番号: ${phone || 'なし'}
+お問い合わせ種別: ${subject}
+お問い合わせ内容:
 ${message}
 
 ---
@@ -129,6 +135,8 @@ ${message}
             <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <p><strong>お名前:</strong> ${name}</p>
               <p><strong>メールアドレス:</strong> ${email}</p>
+              <p><strong>電話番号:</strong> ${phone || 'なし'}</p>
+              <p><strong>お問い合わせ種別:</strong> ${subject}</p>
               <p><strong>お問い合わせ内容:</strong></p>
               <p style="white-space: pre-wrap;">${message.replace(/\n/g, '<br>')}</p>
             </div>
@@ -157,6 +165,8 @@ ${name} 様
 ------------------
 お名前: ${name}
 メールアドレス: ${email}
+電話番号: ${phone || 'なし'}
+お問い合わせ種別: ${subject}
 お問い合わせ内容:
 ${message}
 ------------------
