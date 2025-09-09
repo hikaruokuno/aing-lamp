@@ -29,10 +29,15 @@ export async function onRequestPost(context) {
     if (website) {
       console.log('Spam detected: honeypot field filled');
       return new Response(
-        JSON.stringify({ success: true, message: 'お問い合わせありがとうございます。' }),
-        { 
+        JSON.stringify({
+          success: true,
+          message: 'お問い合わせありがとうございます。'
+        }), {
           status: 200,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+          headers: {
+            ...corsHeaders,
+            'Content-Type': 'application/json'
+          }
         }
       );
     }
@@ -78,7 +83,7 @@ export async function onRequestPost(context) {
       },
       body: JSON.stringify({
         from: 'noreply@sendmail-hp.com', // Resendに登録したドメインのメールアドレス
-        to: 'donot.say.lazy@gmail.com',
+        to: 'conomi.office.20@gmail.com ',
         subject: '【あいんぐらんぷ】お問い合わせ',
         reply_to: email,
         html: `
@@ -199,7 +204,7 @@ TEL: 090-9540-9004
     });
 
     const autoReplyData = await autoReplyResponse.json();
-    
+
     if (!autoReplyResponse.ok) {
       console.error('Auto-reply email failed:', autoReplyData);
       // 自動返信が失敗しても、管理者へのメールは送信済みなので成功として扱う
