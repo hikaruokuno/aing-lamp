@@ -1,4 +1,6 @@
 export async function onRequestPost(context) {
+  console.log('Contact form request received');
+  
   const corsHeaders = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -38,6 +40,7 @@ export async function onRequestPost(context) {
 
     // Get API key from environment variable
     const RESEND_API_KEY = context.env.RESEND_API_KEY;
+    console.log('RESEND_API_KEY exists:', !!RESEND_API_KEY);
     if (!RESEND_API_KEY) {
       console.error('RESEND_API_KEY is not set');
       return new Response(
