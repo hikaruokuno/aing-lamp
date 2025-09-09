@@ -147,24 +147,66 @@ galleryImages.forEach(image => {
 // お問い合わせフォーム処理
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         const formData = new FormData(this);
         const formMessage = document.getElementById('form-message');
+        const submitButton = this.querySelector('button[type="submit"]');
         
-        // ここで実際のフォーム送信処理を行う
-        // 今回はデモのため、成功メッセージを表示
-        formMessage.textContent = 'お問い合わせありがとうございます。内容を確認後、ご連絡させていただきます。';
-        formMessage.className = 'mt-4 text-center text-green-600 font-bold';
-        formMessage.classList.remove('hidden');
+        // 送信ボタンを無効化
+        submitButton.disabled = true;
+        submitButton.textContent = '送信中...';
         
-        // フォームをリセット
-        this.reset();
+        // FormDataをJSONに変換
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            message: `件名: ${formData.get('subject')}\n電話番号: ${formData.get('phone') || 'なし'}\n\n${formData.get('message')}`
+        };
         
-        // メッセージを5秒後に非表示
-        setTimeout(() => {
-            formMessage.classList.add('hidden');
-        }, 5000);
+        try {
+            // Pages FunctionsのAPIエンドポイント
+            const WORKER_URL = '/api/contact';
+            
+            const response = await fetch(WORKER_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            
+            const result = await response.json();
+            
+            if (response.ok) {
+                // 成功メッセージ
+                formMessage.textContent = 'お問い合わせありがとうございます。内容を確認後、ご連絡させていただきます。';
+                formMessage.className = 'mt-4 text-center text-green-600 font-bold';
+                formMessage.classList.remove('hidden');
+                
+                // フォームをリセット
+                this.reset();
+            } else {
+                // エラーメッセージ
+                formMessage.textContent = result.error || 'エラーが発生しました。もう一度お試しください。';
+                formMessage.className = 'mt-4 text-center text-red-600 font-bold';
+                formMessage.classList.remove('hidden');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            formMessage.textContent = 'ネットワークエラーが発生しました。インターネット接続をご確認ください。';
+            formMessage.className = 'mt-4 text-center text-red-600 font-bold';
+            formMessage.classList.remove('hidden');
+        } finally {
+            // 送信ボタンを有効化
+            submitButton.disabled = false;
+            submitButton.textContent = '送信する';
+            
+            // メッセージを5秒後に非表示
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        }
     });
 }
