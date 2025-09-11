@@ -429,11 +429,11 @@
         </div>
     </section>
 
-    <!-- サブスクリプション「灯りと手紙」 -->
+    <!-- サブスクリプション「灯りの手紙」 -->
     <section id="subscription" class="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-serif-jp font-bold text-center mb-8 text-rose-700">灯りと手紙</h2>
+                <h2 class="text-4xl md:text-5xl font-serif-jp font-bold text-center mb-8 text-rose-700">灯りの手紙</h2>
                 
                 <p class="text-xl text-center font-serif-jp mb-12">始まりは、あなた自身との対話。</p>
                 
@@ -444,14 +444,14 @@
                     </p>
                     
                     <p class="text-lg leading-relaxed mb-6">
-                        あいんぐらんぷのオーナー、藤原愛が心を込めて創り上げた、特別なサブスクリプション『灯りと手紙』<br>
+                        あいんぐらんぷのオーナー、藤原愛が心を込めて創り上げた、特別なサブスクリプション『灯りの手紙』<br>
                         それは、言葉と光が織りなす、あなただけの癒しの世界。<br>
                         キャンドルの温もり、詩の言葉、そして声の温もりが、五感を通して、疲れた心にそっと光を灯します。
                     </p>
                     
                     <!-- サブスク画像 -->
                     <div class="mb-8">
-                        <img src="images/sabscribe.jpg" alt="灯りと手紙 - キャンドルと手紙" class="w-full max-w-2xl mx-auto rounded-lg shadow-md">
+                        <img src="images/sabscribe.jpg" alt="灯りの手紙 - キャンドルと手紙" class="w-full max-w-2xl mx-auto rounded-lg shadow-md">
                     </div>
                     
                     <h3 class="text-2xl font-bold mb-6 text-rose-700">【サブスクに含まれるもの】</h3>
@@ -501,7 +501,7 @@
                         </p>
                         
                         <p class="text-lg font-serif-jp">
-                            『灯りと手紙』が、あなたの心に寄り添い、<br>
+                            『灯りの手紙』が、あなたの心に寄り添い、<br>
                             明日への希望を紡ぐ存在となりますように...
                         </p>
                     </div>
